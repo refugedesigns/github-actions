@@ -1,0 +1,8 @@
+name: Issues
+on: [issues]
+jobs:
+    log:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Log
+              run: echo "${{ github.event.issue.title }}  \n ${github.event.issue.body} \n ${github.event.issue.labels} \n ${github.event.issue.assignees}"
